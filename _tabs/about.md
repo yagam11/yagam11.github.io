@@ -8,7 +8,7 @@ order: 4
 {: .prompt-tip } -->
 
 <h4>Who are you?</h4>
-<p>Hi, there! (*ˊᗜˋﾉﾉ Apologies for the vaguely constructed personal site.</p>
+<p>Hi, there! Apologies for this janky personal site.</p>
 
 <h4>Who are you?</h4>
 <p>Hi, I'm Yagam11. I'm a student and a developer. I'm interested in programming, web development, and game development. (copilot generated)</p>
