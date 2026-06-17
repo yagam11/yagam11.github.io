@@ -2,25 +2,67 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #111827;
+  --surface: #ffffff;
+  --surface-hover: #f3f4f6;
+  --border: #e5e7eb;
+  --muted: #6b7280;
+  --muted-foreground: #4b5563;
+  --link: #1d4ed8;
+  --link-hover: #1e40af;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-surface: var(--surface);
+  --color-surface-hover: var(--surface-hover);
+  --color-border: var(--border);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-link: var(--link);
+  --color-link-hover: var(--link-hover);
+  --font-sans: var(--font-stix-two-text);
+  --font-mono: var(--font-stix-two-text);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.dark {
+  --background: #090d16;
+  --foreground: #e5e7eb;
+  --surface: #101827;
+  --surface-hover: #172033;
+  --border: #243045;
+  --muted: #9ca3af;
+  --muted-foreground: #c4c7ce;
+  --link: #93c5fd;
+  --link-hover: #bfdbfe;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-stix-two-text), serif;
+}
+
+.inline-link {
+  color: inherit;
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  transition: opacity 140ms ease, text-decoration-color 140ms ease;
+}
+
+.inline-link:hover {
+  opacity: 0.72;
+}
+
+.nav-link {
+  color: var(--muted);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: color 140ms ease;
+}
+
+.nav-link:hover {
+  color: var(--foreground);
 }

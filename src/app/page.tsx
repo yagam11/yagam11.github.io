@@ -1,64 +1,77 @@
 import Image from "next/image";
+import { ContactRow } from "@/components/contact-row";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+    <div className="bg-background text-foreground">
+      <main className="mx-auto flex w-full max-w-[653px] flex-col gap-10 px-6 py-12 sm:px-8 sm:py-16">
+        <section id="top" className="relative space-y-4 pt-6 sm:pt-8">
+          <div className="absolute left-0 top-6 hidden -translate-x-[calc(100%+5rem)] flex-col items-start gap-3 md:flex">
+            <div className="relative h-28 w-28 overflow-hidden rounded-full md:h-32 md:w-32">
+              <Image
+                src="/profile.jpeg?v=3"
+                alt="Profile image of Tianchi Huang"
+                fill
+                sizes="(max-width: 768px) 112px, 128px"
+                className="object-cover object-center"
+                priority
+              />
+            </div>
+            <ContactRow
+              linkedinUrl="https://www.linkedin.com/in/tianchihuang/"
+              email="htianchi8@gmail.com"
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+          </div>
+          <h1 className="text-[24px] font-medium leading-none tracking-tight sm:text-[28px]">
+            Tianchi Huang
+          </h1>
+          <div className="space-y-4 text-[17px] leading-[1.5] text-foreground">
+            <p>Hi, I&apos;m Tianchi.</p>
+
+            <p>
+              I&apos;m a developer interested in distributed systems, computer networks,
+              and the infrastructure that powers modern software.
+            </p>
+
+            <p>
+              I studied Mathematics and Computer Science at Boston University and completed 
+              my Sc.M. in Computer Science at Brown University. I&apos;ll be joining Google as a 
+              Software Engineer.
+
+            </p>
+
+            <p>
+              Outside of work, I like reading about investing, looking for great
+              restaurants, and exploring new places. I&apos;m generally curious about
+              how things work, whether it&apos;s software, businesses, or ideas. I
+              usually have{' '}
+              <a
+                className="inline-link"
+                href="https://open.spotify.com/artist/3pc0bOVB5whxmD50W79wwO"
+                target="_blank"
+                rel="noreferrer"
+              >
+                music
+              </a>
+              {' '}playing somewhere in the background.
+            </p>
+
+            <p>
+              After growing up around Shanghai&apos;s dense metro life, moving to
+              the United States gave me a new appreciation for cars. I like the
+              freedom of being able to leave when you want, take the longer
+              route, and end up somewhere you didn&apos;t plan for. Sometimes the
+              destination matters. Sometimes it doesn&apos;t.
+            </p>
+
+            <p>
+              Film, anime, and games are another longtime interest of mine. Some
+              of my favorite directors are Shinichirō Watanabe, Satoshi Kon, and
+              Christopher Nolan, I am a big fan of Rockstar Games. I&apos;m drawn to
+              works that blend style, tension, and a world that feels lived in.
+            </p>
+          </div>
+        </section>
       </main>
     </div>
   );
