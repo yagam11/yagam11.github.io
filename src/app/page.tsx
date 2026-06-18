@@ -1,22 +1,39 @@
-import Image from "next/image";
+"use client";
+
 import { ContactRow } from "@/components/contact-row";
+import { ProfilePicture } from "@/components/profile-picture";
+import Image from "next/image";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [isImageOpen, setIsImageOpen] = useState(false);
+
+  useEffect(() => {
+    if (!isImageOpen) {
+      return;
+    }
+
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setIsImageOpen(false);
+      }
+    };
+
+    window.addEventListener("keydown", handleEscape);
+
+    return () => window.removeEventListener("keydown", handleEscape);
+  }, [isImageOpen]);
+
   return (
     <div className="bg-background text-foreground">
       <main className="mx-auto flex w-full max-w-[653px] flex-col gap-10 px-6 py-12 sm:px-8 sm:py-16">
         <section id="top" className="relative space-y-4 pt-6 sm:pt-8">
           <div className="absolute left-0 top-6 hidden -translate-x-[calc(100%+5rem)] flex-col items-start gap-3 md:flex">
-            <div className="relative h-28 w-28 overflow-hidden rounded-full md:h-32 md:w-32">
-              <Image
-                src="/profile.jpeg?v=3"
-                alt="Profile image of Tianchi Huang"
-                fill
-                sizes="(max-width: 768px) 112px, 128px"
-                className="object-cover object-center"
-                priority
-              />
-            </div>
+            <ProfilePicture
+              src="/profile.jpeg"
+              alt="Profile image of Tianchi Huang"
+              onClick={() => setIsImageOpen(true)}
+            />
             <ContactRow
               linkedinUrl="https://www.linkedin.com/in/tianchihuang/"
               email="htianchi8@gmail.com"
@@ -73,6 +90,26 @@ export default function Home() {
           </div>
         </section>
       </main>
+
+      {isImageOpen ? (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/60"
+          role="presentation"
+          onClick={() => setIsImageOpen(false)}
+        >
+          <div className="profile-preview-panel relative h-[86vh] aspect-[3609/4586] max-h-[90vh] max-w-[90vw] overflow-hidden rounded-2xl bg-background shadow-2xl">
+            <div className="relative h-full w-full" onClick={(event) => event.stopPropagation()}>
+              <Image
+                src="/profile.jpeg"
+                alt="Large profile image of Tianchi Huang"
+                fill
+                sizes="(max-width: 640px) 90vw, (max-width: 1024px) 86vh, 90vw"
+                className="object-contain object-center"
+              />
+            </div>
+          </div>
+        </div>
+      ) : null}
     </div>
   );
 }
