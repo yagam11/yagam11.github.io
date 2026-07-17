@@ -46,22 +46,33 @@ export default function Home() {
             <p>Hi, I&apos;m Tianchi.</p>
 
             <p>
-              I&apos;m a developer interested in distributed systems, computer networks,
-              and the infrastructure that powers modern software.
+              I&apos;m a software engineer interested in distributed systems, computer
+              networks, and the infrastructure behind modern software.
             </p>
 
             <p>
-              I studied Mathematics and Computer Science at Boston University and completed 
-              my Sc.M. in Computer Science at Brown University. I&apos;ll be joining Google as a 
-              Software Engineer.
-
+              I studied Mathematics and Computer Science at Boston University and
+              completed my Sc.M. in Computer Science at Brown University. I&apos;ll be
+              joining Google as a Software Engineer.
             </p>
 
             <p>
-              Outside of work, I like reading about investing, looking for great
-              restaurants, and exploring new places. I&apos;m generally curious about
-              how things work, whether it&apos;s software, businesses, or ideas. I
-              usually have{' '}
+              Outside of work, I enjoy reading about investing, trying new
+              restaurants, and traveling. I also enjoy hiking, and one of my
+              favorite experiences was climbing Mount Fuji. I&apos;m always looking for
+              opportunities to explore places with different histories, cultures,
+              and landscapes.
+            </p>
+
+            <p>
+              Growing up in Shanghai and later moving to the United States gave me
+              two very different perspectives on how cities are designed. Living in
+              both environments made me appreciate how infrastructure quietly shapes
+              the way people work, travel, and interact with the world.
+            </p>
+
+            <p>
+              I&apos;m also interested in film, anime, games, and{' '}
               <a
                 className="inline-link"
                 href="https://open.spotify.com/artist/3pc0bOVB5whxmD50W79wwO"
@@ -70,22 +81,9 @@ export default function Home() {
               >
                 music
               </a>
-              {' '}playing somewhere in the background.
-            </p>
-
-            <p>
-              After growing up around Shanghai&apos;s dense metro life, moving to
-              the United States gave me a new appreciation for cars. I like the
-              freedom of being able to leave when you want, take the longer
-              route, and end up somewhere you didn&apos;t plan for. Sometimes the
-              destination matters. Sometimes it doesn&apos;t.
-            </p>
-
-            <p>
-              Film, anime, and games are another longtime interest of mine. Some
-              of my favorite directors are Shinichirō Watanabe, Satoshi Kon, and
-              Christopher Nolan, I am a big fan of Rockstar Games. I&apos;m drawn to
-              works that blend style, tension, and a world that feels lived in.
+              . Some of my favorite directors are Shinichirō Watanabe, Satoshi Kon,
+              and Christopher Nolan, and I&apos;m a longtime fan of Rockstar Games. 
+              I enjoy works that leave you thinking about them long after they&apos;re over.
             </p>
           </div>
         </section>
