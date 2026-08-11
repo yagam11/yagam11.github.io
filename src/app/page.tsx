@@ -65,10 +65,10 @@ export default function Home() {
             </p>
 
             <p>
-              Growing up in Shanghai and later moving to the United States gave me
-              two very different perspectives on how cities are designed. Living in
-              both environments made me appreciate how infrastructure quietly shapes
-              the way people work, travel, and interact with the world.
+              Growing up in Shanghai and later moving to the United States exposed me to two 
+              very different cultures and ways of life. Experiencing both environments gave 
+              me a broader perspective on how people from different backgrounds think, 
+              communicate, and approach the world around them.
             </p>
 
             <p>
