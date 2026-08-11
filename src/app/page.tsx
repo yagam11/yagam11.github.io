@@ -58,9 +58,9 @@ export default function Home() {
 
             <p>
               Outside of work, I enjoy reading about investing, trying new
-              restaurants, and traveling. I also enjoy hiking, and one of my
-              favorite experiences was climbing Mount Fuji. I&apos;m always looking for
-              opportunities to explore places with different histories, cultures,
+              restaurants, and traveling. I also enjoy hiking, and one of my recent favorite 
+              experiences was climbing Mount Fuji via the Yoshida Trail. I&apos;m always looking 
+              for opportunities to explore places with different histories, cultures,
               and landscapes.
             </p>
 
